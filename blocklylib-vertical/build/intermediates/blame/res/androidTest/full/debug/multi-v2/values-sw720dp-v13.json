@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Volumes/lyt/androidProject/blockly-android/blocklylib-vertical/build/intermediates/incremental/mergeFullDebugAndroidTestResources/merged.dir/values-sw720dp-v13/values-sw720dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Volumes/lyt/androidProject/blockly-android/blocklylib-core/build/intermediates/packaged_res/full/debug/values-sw720dp-v13/values-sw720dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "53",
+                        "endOffsets": "104"
+                    }
+                }
+            ]
+        }
+    ]
+}

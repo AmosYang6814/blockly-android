@@ -1,0 +1,30 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.google.blockly.android"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/yangzhen/Desktop/blockly-android/blockly-android/blocklylib-core/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="26" />
+9-->/Users/yangzhen/Desktop/blockly-android/blockly-android/blocklylib-core/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/yangzhen/Desktop/blockly-android/blockly-android/blocklylib-core/src/main/AndroidManifest.xml:5:5-67
+11-->/Users/yangzhen/Desktop/blockly-android/blockly-android/blocklylib-core/src/main/AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+12-->/Users/yangzhen/Desktop/blockly-android/blockly-android/blocklylib-core/src/main/AndroidManifest.xml:6:5-81
+12-->/Users/yangzhen/Desktop/blockly-android/blockly-android/blocklylib-core/src/main/AndroidManifest.xml:6:22-78
+13
+14    <application>
+14-->/Users/yangzhen/Desktop/blockly-android/blockly-android/blocklylib-core/src/main/AndroidManifest.xml:8:5-12:19
+15        <service
+15-->/Users/yangzhen/Desktop/blockly-android/blockly-android/blocklylib-core/src/main/AndroidManifest.xml:9:9-11:39
+16            android:name="com.google.blockly.android.codegen.CodeGeneratorService"
+16-->/Users/yangzhen/Desktop/blockly-android/blockly-android/blocklylib-core/src/main/AndroidManifest.xml:10:13-57
+17            android:exported="false" />
+17-->/Users/yangzhen/Desktop/blockly-android/blockly-android/blocklylib-core/src/main/AndroidManifest.xml:11:13-37
+18    </application>
+19
+20</manifest>

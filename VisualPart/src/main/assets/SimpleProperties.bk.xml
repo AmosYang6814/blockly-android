@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+语法解释如下：
+<AttributeDefine>标签下面是组件
+<module> 表示组件的标签
+  属性如下：
+  className=:表示匹配的属性的全类路径名/all表示下面的属性针对所有组件都需要设置
+  dispalyName=表示组件的显示的名称
+  classfiy:表示组件的分类
+
+ <attribute>标签表示该组件的属性设置方法
+    inputTypeform：表示传入参数的类型
+    reflectMethod：表示反射调用的方法
+     Passingform="(#,null)" ：表示传入参数的格式
+       # 表示：参数的位置，参数的类型在上面给定了
+
+<classfiy>表示组件的分类
+-->
+
+<UI>
+    <AttributeDefine>
+        <module  name="all">
+        </module>
+
+        <module className="android.widget.EditText"
+                dispalyName="文本输入框"
+                classfiy="@test1">
+            <attribute name="输入"
+                inputTypeform="(String)"
+                reflectMethod="setText"
+                Passingform="(#,null)"/>
+        </module>
+
+        <module name="android.widget.Button"
+                dispalyName="按钮"
+                classfiy="@test1">
+            <attribute name="按钮显示"
+                inputTypeform="(String)"
+                reflectMethod="setText"
+                Passingform="(#)"/>
+
+            <attribute name="背景颜色"
+                inputTypeform="(Color)"
+                reflectMethod="setBackgroundColor"
+                Passingform="(#)"
+            />
+
+        </module>
+
+
+    </AttributeDefine>
+
+    <classfiy>
+        <item id="test1">常用文本 </item>
+    </classfiy>
+</UI>

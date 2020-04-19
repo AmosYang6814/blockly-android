@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:blockly="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+            android:id="@+id/pBar2"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_weight="1" />
+
+    <fragment android:name="com.google.blockly.android.WorkspaceFragment"
+              android:id="@+id/blockly_workspace2"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_toEndOf="@+id/blockly_categories2"
+              android:layout_toRightOf="@id/blockly_categories2" android:layout_marginLeft="0dp"
+              android:layout_marginStart="0dp"/>
+
+    <fragment android:name="com.google.blockly.android.FlyoutFragment"
+              android:id="@+id/blockly_trash_ui2"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_alignParentBottom="true"
+              android:layout_toEndOf="@id/blockly_categories2"
+              android:layout_toRightOf="@id/blockly_categories2"
+              blockly:scrollOrientation="horizontal"
+              blockly:closeable="true"
+              tools:ignore="MissingPrefix"/>
+
+
+    <fragment android:name="com.google.blockly.android.CategorySelectorFragment"
+              android:id="@+id/blockly_categories2"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:layout_alignParentStart="true"
+              android:layout_alignParentLeft="true"
+              blockly:labelRotation="start"
+              blockly:scrollOrientation="vertical"
+              tools:ignore="MissingPrefix"/>
+    <fragment android:name="com.google.blockly.android.FlyoutFragment"
+              android:id="@+id/blockly_toolbox_ui2"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:layout_toEndOf="@id/blockly_categories2"
+              android:layout_toRightOf="@id/blockly_categories2"
+              blockly:scrollOrientation="vertical"
+              blockly:closeable="true"
+              tools:ignore="MissingPrefix"/>
+
+
+    <LinearLayout android:id="@+id/blockly_overlay_buttons2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+
+        <ImageButton android:id="@+id/blockly_zoom_in_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/translucent"
+            android:padding="2dp"
+            android:src="@drawable/zoom_in"/>
+
+        <ImageButton android:id="@+id/blockly_zoom_out_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/translucent"
+            android:padding="2dp"
+            android:src="@drawable/zoom_out"/>
+
+        <ImageButton android:id="@+id/blockly_center_view_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/translucent"
+            android:padding="2dp"
+            android:src="@drawable/reset_view"/>
+
+        <com.google.blockly.android.ui.TrashCanView
+            android:id="@+id/blockly_trash_icon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/translucent"
+            android:padding="2dp"/>
+
+
+    </LinearLayout>
+
+    <Spinner android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/spinner2"
+             android:entries="@array/屏幕选择"
+             android:visibility="invisible"
+             android:layout_marginLeft="30dp"
+             android:layout_marginTop="10dp"
+             android:spinnerMode="dropdown"
+            android:clickable="true">
+    </Spinner>
+
+</RelativeLayout>

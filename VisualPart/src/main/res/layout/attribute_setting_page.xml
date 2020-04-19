@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_margin="50dp"
+        android:background="@color/whitesmoke"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/labelAttributeSetting"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="属性设置"/>
+
+
+        <ListView
+            android:id="@+id/AttributeList"
+            android:layout_width="match_parent"
+            app:layout_constraintBottom_toTopOf="@id/commitButton"
+            app:layout_constraintTop_toBottomOf="@id/labelAttributeSetting"
+            android:layout_margin="10dp"
+            android:layout_height="0dp">
+
+        </ListView>
+
+
+        <Button
+            android:id="@+id/commitButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+
+            android:text="确认"
+            />
+
+        <Button
+            android:id="@+id/cancelButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="取消"
+            />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Volumes/lyt/androidProject/blockly-android/blocklylib-core/build/intermediates/incremental/mergeFullDebugAndroidTestResources/merged.dir/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/Users/luoyutao/.gradle/caches/transforms-2/files-2.1/1bc64eb319996dfb25f8d311041cce03/support-compat-28.0.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "/Users/luoyutao/.gradle/caches/transforms-2/files-2.1/0ce88cb988b14ef16afb0b45230b2c7d/appcompat-v7-28.0.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                }
+            ]
+        }
+    ]
+}

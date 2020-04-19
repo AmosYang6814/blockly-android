@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Administrator\\OneDrive - mail.ustc.edu.cn\\blockly-android\\blocklylib-vertical\\build\\intermediates\\res\\merged\\full\\release\\values-land\\values-land.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\34fcc5feacf88b1fb431922b6236563e\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\Administrator\\OneDrive - mail.ustc.edu.cn\\blockly-android\\blocklylib-vertical\\build\\intermediates\\incremental\\mergeFullReleaseResources\\merged.dir\\values-land\\values-land.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\34fcc5feacf88b1fb431922b6236563e\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    }
+                }
+            ]
+        }
+    ]
+}

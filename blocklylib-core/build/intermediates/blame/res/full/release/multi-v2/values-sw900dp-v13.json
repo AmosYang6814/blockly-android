@@ -1,0 +1,48 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Administrator\\OneDrive - mail.ustc.edu.cn\\blockly-android\\blocklylib-core\\build\\intermediates\\res\\merged\\full\\release\\values-sw900dp-v13\\values-sw900dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Administrator\\OneDrive - mail.ustc.edu.cn\\blockly-android\\blocklylib-core\\src\\main\\res\\values-sw900dp\\dimens.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "0",
+                        "startOffsets": "13",
+                        "endColumns": "49",
+                        "endOffsets": "62"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "53",
+                        "endOffsets": "104"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\Administrator\\OneDrive - mail.ustc.edu.cn\\blockly-android\\blocklylib-core\\build\\intermediates\\incremental\\mergeFullReleaseResources\\merged.dir\\values-sw900dp-v13\\values-sw900dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Administrator\\OneDrive - mail.ustc.edu.cn\\blockly-android\\blocklylib-core\\src\\main\\res\\values-sw900dp\\dimens.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "0",
+                        "startOffsets": "13",
+                        "endColumns": "49",
+                        "endOffsets": "62"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "53",
+                        "endOffsets": "104"
+                    }
+                }
+            ]
+        }
+    ]
+}

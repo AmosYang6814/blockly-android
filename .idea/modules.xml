@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/VisualPart/VisualPart.iml" filepath="$PROJECT_DIR$/VisualPart/VisualPart.iml" group="blockly-android/VisualPart" />
+      <module fileurl="file://$PROJECT_DIR$/blockly-android.iml" filepath="$PROJECT_DIR$/blockly-android.iml" group="blockly-android" />
+      <module fileurl="file://$PROJECT_DIR$/blocklydemo/blocklydemo.iml" filepath="$PROJECT_DIR$/blocklydemo/blocklydemo.iml" group="blockly-android/blocklydemo" />
+      <module fileurl="file://$PROJECT_DIR$/blocklylib-core/blocklylib-core.iml" filepath="$PROJECT_DIR$/blocklylib-core/blocklylib-core.iml" group="blockly-android/blocklylib-core" />
+      <module fileurl="file://$PROJECT_DIR$/blocklylib-vertical/blocklylib-vertical.iml" filepath="$PROJECT_DIR$/blocklylib-vertical/blocklylib-vertical.iml" group="blockly-android/blocklylib-vertical" />
+      <module fileurl="file://$PROJECT_DIR$/blocklytest/blocklytest.iml" filepath="$PROJECT_DIR$/blocklytest/blocklytest.iml" group="blockly-android/blocklytest" />
+      <module fileurl="file://$PROJECT_DIR$/lytdemo/lytdemo.iml" filepath="$PROJECT_DIR$/lytdemo/lytdemo.iml" group="blockly-android/lytdemo" />
+    </modules>
+  </component>
+</project>

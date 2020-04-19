@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/Frame_drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!--主界面内容-->
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/FramMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_gravity="start"
+            android:id="@+id/FilePanel"
+            android:layout_width="240dp"
+            android:layout_height="match_parent">
+
+            <ExpandableListView
+                android:id="@+id/FileList"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="240dp"
+                android:layout_height="match_parent">
+
+
+            </ExpandableListView>
+
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.DrawerLayout>
+
+
+</android.support.constraint.ConstraintLayout>

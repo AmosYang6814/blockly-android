@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:orientation="vertical"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="@drawable/bg_color"
+>
+
+    <ImageView
+
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_app"
+            android:contentDescription="@string/app_name"
+            android:adjustViewBounds="false"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:srcCompat="@drawable/user" app:srcCompat="@drawable/user" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <ListView
+            android:id="@+id/my_list"
+            android:layout_marginTop="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+
+
+
+
+
+    <Button
+            android:text="通知"
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_notification"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btn_login"
+            />
+
+    <Button
+            android:text="登录"
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+    />
+</android.support.constraint.ConstraintLayout>

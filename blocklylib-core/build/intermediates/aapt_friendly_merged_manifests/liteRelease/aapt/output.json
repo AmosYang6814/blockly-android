@@ -1,0 +1,1 @@
+[{"outputType":{"type":"AAPT_FRIENDLY_MERGED_MANIFESTS"},"apkData":{"type":"MAIN","splits":[],"versionCode":1,"versionName":"1.0","enabled":true,"outputFile":"blocklylib-core-lite-release.aar","fullName":"liteRelease","baseName":"lite-release"},"path":"AndroidManifest.xml","properties":{"packageId":"com.google.blockly.android","split":""}}]

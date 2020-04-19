@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Administrator\\OneDrive - mail.ustc.edu.cn\\blockly-android\\blocklylib-core\\build\\intermediates\\res\\merged\\lite\\release\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\54e381c41f9db178df5b9928f052dde2\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\OneDrive - mail.ustc.edu.cn\\blockly-android\\blocklylib-core\\build\\intermediates\\res\\merged\\lite\\release\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\54e381c41f9db178df5b9928f052dde2\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\OneDrive - mail.ustc.edu.cn\\blockly-android\\blocklylib-core\\build\\intermediates\\res\\merged\\lite\\release\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\54e381c41f9db178df5b9928f052dde2\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\OneDrive - mail.ustc.edu.cn\\blockly-android\\blocklylib-core\\build\\intermediates\\res\\merged\\lite\\release\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\54e381c41f9db178df5b9928f052dde2\\res\\layout-v21\\notification_action_tombstone.xml"
+    }
+]

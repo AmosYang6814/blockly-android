@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--used in spinner-->
+    <string-array name="屏幕选择">
+        <item>屏幕1</item>
+        <item>屏幕2</item>
+        <item>屏幕3</item>
+        <item>屏幕4</item>
+    </string-array>
+</resources>

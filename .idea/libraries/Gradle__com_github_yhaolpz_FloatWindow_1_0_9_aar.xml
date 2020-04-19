@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.yhaolpz:FloatWindow:1.0.9@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/086818c9ab2e7fa83d4b5c56d4083f99/FloatWindow-1.0.9/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/086818c9ab2e7fa83d4b5c56d4083f99/FloatWindow-1.0.9/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/086818c9ab2e7fa83d4b5c56d4083f99/FloatWindow-1.0.9/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

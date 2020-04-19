@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<properties>
+
+    <functionClass>
+          <!--Ui方面的功能类的配置-->
+        <ScreenOprate  classpath="com.example.administrator.visualizationpart.FunctionCLass.androidScreenOprate"></ScreenOprate>
+        <ActionBuilder classpath="com.example.administrator.visualizationpart.Logic.ActionLogic"></ActionBuilder>
+
+        <!--逻辑方面-->
+        <LogicOprate classpath="com.example.administrator.visualizationpart.FunctionCLass.androidlogicStatesOprate"></LogicOprate>
+
+
+            <!--文件存储方面的-->
+        <PreserveId classpath="DataPersistence.FileStorage.saveId"></PreserveId>
+
+    </functionClass>
+
+
+
+    <!--文件存储路径-->
+    <Filepath path=""></Filepath>
+
+</properties>

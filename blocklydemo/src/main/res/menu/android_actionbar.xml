@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item android:id="@+id/action_run" android:title="@string/action_run"
+          android:orderInCategory="10" app:showAsAction="ifRoom"
+          android:icon="@mipmap/shengchengdaima"/>
+    <item android:id="@+id/action_submitCode" android:title="@string/action_submitCode"
+          android:orderInCategory="11" app:showAsAction="ifRoom"
+          android:icon="@mipmap/shangchuan"/>
+    <item android:id="@+id/action_save" android:title="@string/action_save"
+          android:orderInCategory="12" app:showAsAction="ifRoom"
+          android:icon="@mipmap/baocun"/>
+    <item android:id="@+id/action_load" android:title="@string/action_load"
+          android:orderInCategory="13" app:showAsAction="ifRoom"
+          android:icon="@mipmap/load"/>
+    <item android:id="@+id/action_installApk" android:title="@string/action_installApk"
+          android:orderInCategory="14" app:showAsAction="ifRoom"
+          android:icon="@drawable/ic_play_arrow_white_24dp"/>
+    <item android:id="@+id/action_refresh" android:title="@string/action_refresh"
+          android:orderInCategory="19" app:showAsAction="ifRoom"
+          android:icon="@mipmap/refresh"/>
+    <item android:id="@+id/action_clear" android:title="@string/action_clear"
+          android:orderInCategory="20" app:showAsAction="ifRoom"
+          android:icon="@drawable/ic_layers_clear_white_24dp"/>
+</menu>

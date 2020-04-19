@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.dingmouren.colorpicker:colorpicker:1.0.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f1a3482b243dbb814bb3471bdea7a6f/colorpicker-1.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f1a3482b243dbb814bb3471bdea7a6f/colorpicker-1.0.1/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.dingmouren.colorpicker/colorpicker/1.0.1/e24afd90adc1b57afd7f730fd5817fea1c551e93/colorpicker-1.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.dingmouren.colorpicker/colorpicker/1.0.1/8bce689287995bb036dd24ee66ce398ee4bcbbe9/colorpicker-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

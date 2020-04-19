@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blockly_edit_text_bg">#80ffffff</color>
+    <color name="blockly_spinner_dropdown_bg">#ffeeeeee</color>
+    <color name="blockly_toolbox_bg">#80FFFFFF</color>
+    <color name="blockly_trash_bg">#80808080</color>
+    <color name="translucent">#00000000</color>
+    <color name="white">#fff</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="navigation_drawer_width">240dp</dimen>
+    <dimen name="toolbox_width">1000dp</dimen>
+    <dimen name="unified_workspace_min_trash_height">48dp</dimen>
+    <string name="action_airstrike">Airstrike</string>
+    <string name="action_carpet_bomb">Carpet Bomb</string>
+    <string name="action_clear">Clear</string>
+    <string name="action_load">Load</string>
+    <string name="action_run">Run</string>
+    <string name="action_save">Save</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_spaghetti">Spaghetti</string>
+    <string name="app_name">Blockly</string>
+    <string name="blockly_clipdata_label_default">Blockly blocks</string>
+    <string name="blockly_toolbox_default_category_name">Blocks</string>
+    <string name="mutator_done">Done</string>
+    <string name="mutator_icon_alt_text">Modify the block\'s shape.</string>
+    <string name="mutator_ifelse_edit_has_else">Final “else” statement?</string>
+    <string name="mutator_ifelse_edit_ifelse_count">Number of “if” tests: %d</string>
+    <string name="mutator_ifelse_edit_title">Update if else block</string>
+    <string name="mutator_procedure_def_header_format">%1$s with:</string>
+    <string name="mutator_procedure_def_title">Function Inputs</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="procedure_argument_add_label">Add argument</string>
+    <string name="procedure_argument_delete_hint">Delete argument</string>
+    <string name="procedure_argument_name_hint">Argument name</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="toast_workspace_file_not_found">Couldn\'t find saved workspace.</string>
+    <string name="toast_workspace_load_failed">Failed to load workspace.</string>
+    <string name="toast_workspace_not_saved">Couldn\'t save workspace.</string>
+    <string name="toast_workspace_saved">Saved workspace contents.</string>
+    <style name="BlocklyTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="minScale">0.5</item>
+        <item name="maxScale">2.5</item>
+        <item name="defaultScale">1.0</item>
+    </style>
+    <style name="CategoryLabelStyle" parent="DefaultCategoryLabelStyle">
+    </style>
+    <style name="DefaultCategoryLabelStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+    <style name="DefaultSpinnerDropDownStyle">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+        <item name="android:background">@color/blockly_spinner_dropdown_bg</item>
+        <item name="android:padding">4dip</item>
+    </style>
+    <style name="DefaultSpinnerStyle" parent="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem">
+        <item name="android:textSize">@dimen/abc_text_size_large_material</item>
+        <item name="android:background">@android:drawable/btn_dropdown</item>
+    </style>
+    <declare-styleable name="BasicFieldDropdownView">
+        <attr format="reference" name="itemLayout"/>
+        <attr format="reference" name="dropdownItemLayout"/>
+    </declare-styleable>
+    <declare-styleable name="BlocklyCategory" parent="BlocklyFlyout">
+        <attr name="labelRotation">
+            <!-- Values match com.google.blockly.android.ui.Rotation, used by RotatedViewGroup. -->
+            <flag name="none" value="0x00000000"/> <!-- No rotation. Default. -->
+            <flag name="cw" value="0x00000001"/> <!-- Clockwise -->
+            <flag name="ccw" value="0x00000002"/> <!-- Counter-clockwise -->
+            <flag name="left" value="0x00000002"/> <!-- Counter-clockwise synonym. Top of view moves left. -->
+            <flag name="right" value="0x00000001"/> <!-- Clockwise synonym. Top of view moves right. -->
+            <flag name="start" value="0x00000012"/> <!-- RTL adaptive counter-clockwise -->
+            <flag name="end" value="0x00000011"/> <!-- RTL adaptive clockwise -->
+        </attr>
+        <attr name="scrollOrientation"/>
+    </declare-styleable>
+    <declare-styleable name="BlocklyFlyout">
+        <attr format="boolean" name="closeable"/> <!-- Default false -->
+
+        <attr name="scrollOrientation">
+            <!-- Same values as LinearLayoutManager constants. -->
+            <flag name="horizontal" value="0"/> <!-- SCROLL_HORIZONTAL. Default. -->
+            <flag name="vertical" value="1"/> <!-- SCROLL_VERTICAL. -->
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="BlocklyWorkspaceTheme">
+        <!-- The minimum scaling supported by the workspace -->
+        <attr format="float|reference" name="minScale"/>
+        <!-- The maximum scaling supported by the workspace -->
+        <attr format="float|reference" name="maxScale"/>
+        <!-- The default scaling to use in the workspace -->
+        <attr format="float|reference" name="defaultScale"/>
+        <attr name="zoomBehavior">
+            <!-- No scrollbar. No zoom. No buttons. -->
+            <flag name="fixed" value="1"/>
+
+            <!-- Only scrollable. No buttons. No zoom. -->
+            <flag name="scrollOnly" value="2"/>
+
+            <!-- Scrollable. Zoomable with buttons. Pinch disabled. -->
+            <flag name="zoomButtonsOnly" value="3"/>
+
+            <!-- Scrollable. Zoomable via pinch. No buttons. -->
+            <flag name="zoomPinchOnly" value="4"/>
+
+            <!-- Scrollable. Zoomable via either pinch or buttons. Default. -->
+            <flag name="zoomPinchAndButtons" value="5"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="TrashCanView">
+        <attr format="reference" name="defaultIcon"/>
+        <attr format="reference" name="onHoverIcon"/>
+    </declare-styleable>
+    <declare-styleable name="WorkspaceFragment">
+        <attr format="boolean" name="drawGrid"/>
+        <attr format="color" name="gridColor"/>
+        <attr format="integer" name="gridSpacing"/>
+        <attr format="integer" name="gridDotRadius"/>
+        <attr format="color" name="backgroundColor"/>
+    </declare-styleable>
+</resources>

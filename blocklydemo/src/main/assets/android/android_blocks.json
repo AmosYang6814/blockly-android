@@ -1,0 +1,826 @@
+[{
+  "type": "import_and_onCreate",
+  "message0": "onCreate %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "DO"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null
+},
+  {
+  "type": "textview",
+  "message0": "设置文本框: 编号%1 内容为：%2",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "textviewID",
+      "options": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ],
+        [
+          "3",
+          "3"
+        ],
+        [
+          "4",
+          "4"
+        ]
+      ]
+    },
+    {
+      "type": "input_value",
+      "name": "value"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 210
+},
+  {
+    "type": "print",
+    "message0": "print %1 %2 %3",
+    "args0": [
+      {
+        "type": "field_dropdown",
+        "name": "print_isLine",
+        "options": [
+          [
+            "换行",
+            "println"
+          ],
+          [
+            "不换行",
+            "print"
+          ]
+        ]
+      },
+      {
+        "type": "field_dropdown",
+        "name": "print_content",
+        "options": [
+          [
+            "自定义",
+            "0"
+          ],
+          [
+            "测试内容：hello, Blockly!",
+            "测试内容：hello, Blockly!"
+          ],
+          [
+            "测试内容：hello, Google!",
+            "测试内容：hello, Google!"
+          ],
+          [
+            "测试内容：www.baidu.com",
+            "测试内容：www.baidu.com"
+          ],
+          [
+            "测试内容：clearlove777",
+            "测试内容：clearlove777"
+          ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "print_content_any"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 210,
+    "tooltip": "this is test tooltip",
+    "helpUrl": "www.lyt0617.cn"
+  },
+  {
+    "type": "label",
+    "message0": "设置Label：编号%1 内容为%2",
+    "args0": [
+      {
+        "type": "field_dropdown",
+        "name": "labelID",
+        "options": [
+          [
+            "1",
+            "1"
+          ],
+          [
+            "2",
+            "2"
+          ],
+          [
+            "3",
+            "3"
+          ],
+          [
+            "4",
+            "4"
+          ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "value"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 210
+  },
+  {
+    "type": "text",
+    "message0": "%1 %2 %3",
+    "args0": [
+      {
+        "type": "field_image",
+        "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAKCAQAAAAqJXdxAAAAn0lEQVQI1z3OMa5BURSF4f/cQhAKjUQhuQmFNwGJEUi0RKN5rU7FHKhpjEH3TEMtkdBSCY1EIv8r7nFX9e29V7EBAOvu7RPjwmWGH/VuF8CyN9/OAdvqIXYLvtRaNjx9mMTDyo+NjAN1HNcl9ZQ5oQMM3dgDUqDo1l8DzvwmtZN7mnD+PkmLa+4mhrxVA9fRowBWmVBhFy5gYEjKMfz9AylsaRRgGzvZAAAAAElFTkSuQmCC",
+        "width": 12,
+        "height": 12,
+        "alt": "\u201C"
+      },
+      {
+        "type": "field_input",
+        "name": "TEXT",
+        "text": ""
+      },
+      {
+        "type": "field_image",
+        "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAKCAQAAAAqJXdxAAAAqUlEQVQI1z3KvUpCcRiA8ef9E4JNHhI0aFEacm1o0BsI0Slx8wa8gLauoDnoBhq7DcfWhggONDmJJgqCPA7neJ7p934EOOKOnM8Q7PDElo/4x4lFb2DmuUjcUzS3URnGib9qaPNbuXvBO3sGPHJDRG6fGVdMSeWDP2q99FQdFrz26Gu5Tq7dFMzUvbXy8KXeAj57cOklgA+u1B5AoslLtGIHQMaCVnwDnADZIFIrXsoXrgAAAABJRU5ErkJggg==",
+        "width": 12,
+        "height": 12,
+        "alt": "\u201D"
+      }
+    ],
+    "output": "String",
+    "colour": "%{BKY_TEXTS_HUE}",
+    "tooltip": "%{BKY_TEXT_TEXT_TOOLTIP}",
+    "helpUrl": "%{BKY_TEXT_TEXT_HELPURL}"
+  },
+  {
+    "type": "androidapi",
+    "message0":"androidapi %1 %2",
+    "args0": [
+      {
+        "type": "field_dropdown",
+        "name": "API_type",
+        "options": [
+          [
+            "震动",
+            "zd"
+          ],
+          [
+            "短信",
+            "shortMessage"
+          ]
+        ]
+      },
+      {
+        "type": "field_dropdown",
+        "name": "API_time",
+        "options": [
+          [
+            "1s",
+            "1"
+          ],
+          [
+            "2s",
+            "2"
+          ],
+          [
+            "3s",
+            "3"
+          ],
+          [
+            "4s",
+            "4"
+          ],
+          [
+            "5s",
+            "5"
+          ]
+
+        ]
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 210,
+    "tooltip": "this is test tooltip"
+  },
+  {
+    "type": "singleButton_click",
+    "message0":"点击按钮%1之后 %2",
+    "args0": [
+      {
+        "type": "field_dropdown",
+        "name": "buttonID",
+        "options": [
+          [
+            "按钮ID1",
+            "1"
+          ],
+          [
+            "按钮ID2",
+            "2"
+          ],
+          [
+            "按钮ID3",
+            "3"
+          ],
+          [
+            "按钮ID4",
+            "4"
+          ]
+        ]
+      },
+      {
+        "type": "field_dropdown",
+        "name": "afterClickDefault",
+        "options": [
+          [
+            "默认",
+            "default"
+          ]
+        ]
+      }
+    ],
+    "message1": "执行 %1",
+    "args1": [
+      {
+        "type": "input_statement",
+        "name": "afterClickTODO"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 210,
+    "tooltip": "this is test tooltip"
+  },
+  {
+  "type": "android_math_random_range",
+  "message0": "%{BKY_MATH_RANDOM_INT_TITLE}",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "FROM",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "TO",
+      "check": "Number"
+    }
+  ],
+  "inputsInline": true,
+  "output": "String",
+  "colour": "%{BKY_MATH_HUE}",
+  "tooltip": "%{BKY_MATH_RANDOM_INT_TOOLTIP}",
+  "helpUrl": "%{BKY_MATH_RANDOM_INT_HELPURL}"
+},
+  {
+  "type": "list",
+  "message0": "新建List %1 数据类型 %2 %3 List类型 %4 %5 容量 %6",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "title"
+    },
+    {
+      "type": "field_dropdown",
+      "name": "dataTypeField",
+      "options": [
+        [
+          "Integer",
+          "Integer"
+        ],
+        [
+          "Boolean",
+          "Boolean"
+        ],
+        [
+          "String",
+          "String"
+        ],
+        [
+          "Double",
+          "Double"
+        ],
+        [
+          "Character",
+          "Character"
+        ]
+      ]
+    },
+    {
+      "type": "input_value",
+      "name": "dataType"
+    },
+    {
+      "type": "field_dropdown",
+      "name": "listTypeField",
+      "options": [
+        [
+          "ArrayList",
+          "ArrayList"
+        ],
+        [
+          "LinkedList",
+          "LinkedList"
+        ]
+      ]
+    },
+    {
+      "type": "input_value",
+      "name": "listType"
+    },
+    {
+      "type": "input_value",
+      "name": "size",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 345,
+  "tooltip": "",
+  "helpUrl": ""
+},
+  {
+    "type": "set",
+    "message0": "新建Set %1 数据类型 %2 %3 Set类型 %4 %5",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "title"
+      },
+      {
+        "type": "field_dropdown",
+        "name": "dataTypeField",
+        "options": [
+          [
+            "Integer",
+            "Integer"
+          ],
+          [
+            "Boolean",
+            "Boolean"
+          ],
+          [
+            "String",
+            "String"
+          ],
+          [
+            "Double",
+            "Double"
+          ],
+          [
+            "Character",
+            "Character"
+          ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "dataType"
+      },
+      {
+        "type": "field_dropdown",
+        "name": "setTypeField",
+        "options": [
+          [
+            "HashSet",
+            "HashSet"
+          ],
+          [
+            "TreeSet",
+            "TreeSet"
+          ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "setType"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 345,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  {
+    "type": "map",
+    "message0": "新建Map %1 Key %2 ,Value %3 %4 Map类型 %5 %6",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "title"
+      },
+      {
+        "type": "field_dropdown",
+        "name": "keyTypeField",
+        "options": [
+          [
+            "Integer",
+            "Integer"
+          ],
+          [
+            "Boolean",
+            "Boolean"
+          ],
+          [
+            "String",
+            "String"
+          ],
+          [
+            "Double",
+            "Double"
+          ],
+          [
+            "Character",
+            "Character"
+          ]
+        ]
+      },
+      {
+        "type": "field_dropdown",
+        "name": "valueTypeField",
+        "options": [
+          [
+            "Integer",
+            "Integer"
+          ],
+          [
+            "Boolean",
+            "Boolean"
+          ],
+          [
+            "String",
+            "String"
+          ],
+          [
+            "Double",
+            "Double"
+          ],
+          [
+            "Character",
+            "Character"
+          ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "dataType"
+      },
+      {
+        "type": "field_dropdown",
+        "name": "mapTypeField",
+        "options": [
+          [
+            "HashMap",
+            "HashMap"
+          ],
+          [
+            "TreeMap",
+            "TreeMap"
+          ],
+          [
+            "LinkedHashMap",
+            "LinkedHashMap"
+          ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "mapType"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 230,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  {
+    "type": "element",
+    "message0": "元素名 %1 元素类型 %2 %3 元素值 %4",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "elementName"
+      },
+      {
+        "type": "field_dropdown",
+        "name": "elementTypeField",
+        "options": [
+          [
+            "Integer",
+            "Integer"
+          ],
+          [
+            "Boolean",
+            "Boolean"
+          ],
+          [
+            "String",
+            "String"
+          ],
+          [
+            "Double",
+            "Double"
+          ],
+          [
+            "Character",
+            "Character"
+          ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "elementType"
+      },
+      {
+        "type": "input_value",
+        "name": "elementValue"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 230,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  {
+    "type": "remove_index",
+    "message0": "删除Index %1 in 容器名 %2",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "index"
+      },
+      {
+        "type": "input_value",
+        "name": "containerName",
+        "align": "RIGHT"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 230,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  {
+    "type": "remove_value",
+    "message0": "删除value %1 in 容器名 %2",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "value"
+      },
+      {
+        "type": "input_value",
+        "name": "containerName",
+        "align": "RIGHT"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 230,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  {
+    "type": "set_element",
+    "message0": "更改Index %1 的值，变为 %2 in 容器名 %3",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "index"
+      },
+      {
+        "type": "input_value",
+        "name": "newValue"
+      },
+      {
+        "type": "input_value",
+        "name": "containerName",
+        "align": "RIGHT"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 230,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  {
+    "type": "add_element",
+    "message0": "添加：             值 %1 类型 %2 %3 in 容器名 %4",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "newValue",
+        "align": "RIGHT"
+      },
+      {
+        "type": "field_dropdown",
+        "name": "keyTypeField",
+        "options": [
+          [
+            "Integer",
+            "Integer"
+          ],
+          [
+            "Boolean",
+            "Boolean"
+          ],
+          [
+            "String",
+            "String"
+          ],
+          [
+            "Double",
+            "Double"
+          ],
+          [
+            "Character",
+            "Character"
+          ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "dataType",
+        "align": "RIGHT"
+      },
+      {
+        "type": "input_value",
+        "name": "containerName",
+        "align": "RIGHT"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 230,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  {
+    "type": "get_element",
+    "message0": "容器名 %1 容器类型 %2 %3 索引方式 %4 ，索引= %5",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "containerName",
+        "align": "RIGHT"
+      },
+      {
+        "type": "field_dropdown",
+        "name": "containerTypeField",
+        "options": [
+          [
+            "List",
+            "List"
+          ],
+          [
+            "Set",
+            "Set"
+          ],
+          [
+            "Map",
+            "Map"
+          ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "containerType",
+        "align": "RIGHT"
+      },
+      {
+        "type": "field_dropdown",
+        "name": "indexType",
+        "options": [
+          [
+            "下标查找",
+            "index"
+          ],
+          [
+            "是否存在",
+            "isExisted"
+          ],
+          [
+            "键值对查找",
+            "key"
+          ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "containerIndex"
+      }
+    ],
+    "output": null,
+    "colour": 230,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  {
+    "type": "put_keyandvalue",
+    "message0": "添加：          键 %1 类型 %2 %3 值 %4 类型 %5 %6 in 容器名 %7",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "key",
+        "align": "RIGHT"
+      },
+      {
+        "type": "field_dropdown",
+        "name": "keyTypeField",
+        "options": [
+          [
+            "Integer",
+            "Integer"
+          ],
+          [
+            "Boolean",
+            "Boolean"
+          ],
+          [
+            "String",
+            "String"
+          ],
+          [
+            "Double",
+            "Double"
+          ],
+          [
+            "Character",
+            "Character"
+          ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "keyType",
+        "align": "RIGHT"
+      },
+      {
+        "type": "input_value",
+        "name": "value",
+        "align": "RIGHT"
+      },
+      {
+        "type": "field_dropdown",
+        "name": "valueTypeField",
+        "options": [
+          [
+            "Integer",
+            "Integer"
+          ],
+          [
+            "Boolean",
+            "Boolean"
+          ],
+          [
+            "String",
+            "String"
+          ],
+          [
+            "Double",
+            "Double"
+          ],
+          [
+            "Character",
+            "Character"
+          ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "valueType",
+        "align": "RIGHT"
+      },
+      {
+        "type": "input_value",
+        "name": "MapName",
+        "align": "RIGHT"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 230,
+    "tooltip": "",
+    "helpUrl": ""
+  }
+]

@@ -1,0 +1,40 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><block type="factory_base" id="Fir/2t_Zhd!7a:?nmt(|" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"/>
+    <field name="NAME">test1</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="8zZ6U!yr3httB68CmV3$">
+        <field name="INPUTNAME">red</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="VRtPyv6w7?pC|d7y(lN.">
+            <field name="TEXT">red</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="DSt{:3cDVnp/dt*xW?TP"/>
+          <block type="type_number" id="Q83.5QxywNs?(Ht3iD:,"/>
+        </value>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="QD2DNm5]-r+*.uNZiYyo" deletable="false" movable="false">
+        <field name="TEXT"/>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="yx%|hY/=6]Kn~x=B7@2=" deletable="false" movable="false">
+        <field name="TEXT">lyt0617.cn</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="xWnE=T_zy]gdk:s#PU8I"/>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="()Nm!nLF1bejVx?_EuQG">
+        <mutation colour="#5b80a5"/>
+        <field name="HUE">210</field>
+      </block>
+    </value>
+  </block></xml>

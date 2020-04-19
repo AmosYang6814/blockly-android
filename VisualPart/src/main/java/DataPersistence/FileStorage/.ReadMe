@@ -1,0 +1,8 @@
+1.File类存储时上层抽象存储的一种具体的体现形式
+
+2文件说明
+ 2.1 DocumentTool类，为唯一实例，用于对安卓文件的直接操作，不接触上层Component、Relation、Status类
+ 2.2 SaveComponent类，为组件存储的实现类，该类中实现了Component组件存储的各种方法，并提供Component组件到文件路径、字符串的映射
+ 2.3 SaveRelation类，为关系存储的实现类，该类中实现了Relation关系存储的各种方法，并提供Relation到文件路径、字符串的映射
+ 2.3 SaveStatus类，为状态存储的实现类，该类中实现了Status状态存储的各种方法，并提供Status状态到文件路径、字符串的映射
+ 

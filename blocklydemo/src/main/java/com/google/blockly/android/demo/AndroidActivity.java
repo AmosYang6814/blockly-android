@@ -42,7 +42,7 @@ public class AndroidActivity extends AbstractBlocklyActivity {
 
     private static Context mContext;
     private static final String TAG = "AndroidActivity";
-    private static String screen_id = "1";
+    private static String screen_id = "0";
     private static String SAVE_FILENAME = "android_workspace_" + screen_id + ".xml";
     private static final String AUTOSAVE_FILENAME = "android_workspace_temp.xml";
 
@@ -117,7 +117,7 @@ public class AndroidActivity extends AbstractBlocklyActivity {
         }
         else if(id==R.id.action_installApk)
         {
-            installApkUtil.installApk(mContext, "default.apk");
+            installApkUtil.checkAndInstall(mContext, activity);
             flag=true;
         }
         else if(id==R.id.action_refresh)
@@ -136,7 +136,7 @@ public class AndroidActivity extends AbstractBlocklyActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        screen_id = getIntent().getStringExtra("screen_id");
+        screen_id = getIntent().getStringExtra("screen_id") == null ?  "0" : getIntent().getStringExtra("screen_id");
         SAVE_FILENAME = "android_workspace_" + screen_id + ".xml";
         onLoadWorkspace();
         if (getController().getWorkspace().hasBlocks()) {

@@ -6,8 +6,8 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->/Users/yangzhen/Desktop/blockly-android/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
+8-->/Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="26" />
-9-->/Users/yangzhen/Desktop/blockly-android/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
+9-->/Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
 10
 11</manifest>

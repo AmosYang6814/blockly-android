@@ -202,15 +202,21 @@ public class FrameActivity extends AppCompatActivity {
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
 
                 if (groupPosition == 0) {
+
                     String name = adapter.getmItemList().get(groupPosition).get(childPosition);
                     FragmentManager fm = getSupportFragmentManager();
                     FragmentTransaction tx = fm.beginTransaction();
                     List<Fragment> fragments = fm.getFragments();
+
                     for (Fragment fragment : fragments) {
-                        if (fragment.isAdded() && fragment.isVisible()) tx.hide(fragment);
+                        if ( fragment.isAdded()) {
+                            tx.hide(fragment);
+                        }
                     }
-                    tx.show(fm.findFragmentByTag(name));
+
+                    tx.show(fm.findFragmentByTag(name)).commit();
                 }
+
                 else if(groupPosition==1){
                     Intent intent=new Intent("com.example.blockly.AndroidActivity");
                     intent.putExtra("screen_id",adapter.getmItemList().get(groupPosition).get(childPosition));

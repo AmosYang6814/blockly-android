@@ -16,12 +16,12 @@ public class Relation {
     /**
      * 前一个状态的id
      */
-    int per_status_id;
+    String per_status_id;
 
     /**
      * 后一个状态的id
      */
-    int next_status_id;
+    String next_status_id;
 
     int logic_id;
 
@@ -57,19 +57,19 @@ public class Relation {
     }
 
 
-    public int getPer_status_id() {
+    public String getPer_status_id() {
         return per_status_id;
     }
 
-    public void setPer_status_id(int per_status_id) {
+    public void setPer_status_id(String per_status_id) {
         this.per_status_id = per_status_id;
     }
 
-    public int getNext_status_id() {
+    public String getNext_status_id() {
         return next_status_id;
     }
 
-    public void setNext_status_id(int next_status_id) {
+    public void setNext_status_id(String next_status_id) {
         this.next_status_id = next_status_id;
     }
 

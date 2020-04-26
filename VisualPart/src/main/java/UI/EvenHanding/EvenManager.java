@@ -16,7 +16,7 @@ public class EvenManager {
     /**
      * 根据屏幕id添加的动作链
      */
-    HashMap<Integer, LinkedList<Action>> actionMap=new HashMap<>();
+    HashMap<String, LinkedList<Action>> actionMap=new HashMap<>();
 
     /**
      * 添加动作
@@ -24,7 +24,7 @@ public class EvenManager {
      * @param action
      * @return
      */
-    public boolean addAction(int screenId, Action action){
+    public boolean addAction(String screenId, Action action){
         try {
             if(!actionMap.containsKey(screenId)){
                 LinkedList<Action> actionLinkedList=new LinkedList<>();

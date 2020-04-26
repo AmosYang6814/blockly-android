@@ -7,24 +7,24 @@ import GlobalTools.DataBean.Screen;
  * 链接的全局的数据接口，链接两个动作，并记录链接的方式以及其他的数据
  */
 public class Screenlink extends Action {
-    public int getPreScreenId() {
+    public String getPreScreenId() {
         return preScreenId;
     }
 
-    public void setPreScreenId(int preScreenId) {
+    public void setPreScreenId(String preScreenId) {
         this.preScreenId = preScreenId;
     }
 
-    public int getNextScreenId() {
+    public String getNextScreenId() {
         return nextScreenId;
     }
 
-    public void setNextScreenId(int nextScreenId) {
+    public void setNextScreenId(String nextScreenId) {
         this.nextScreenId = nextScreenId;
     }
 
-    int preScreenId;
-    int nextScreenId;
+    String preScreenId;
+    String nextScreenId;
 
 
 
@@ -34,8 +34,9 @@ public class Screenlink extends Action {
      * @param next
      * @param action
      */
-    public Screenlink(int pre, int next, Action action) {
-        super(action.getScreenId(),action.getComponentId(),action.getAction(),action.getActionMean());
+    @SuppressWarnings("unchecked")
+    public Screenlink(String pre, String next, Action action) {
+        super(action.getScreenId(),action.getComponentId(),action.getEvent(),action.getActionMean());
         super.classType=ACTIONTYPE_MEAN_JUMP;
         this.preScreenId = pre;
         this.nextScreenId = next;

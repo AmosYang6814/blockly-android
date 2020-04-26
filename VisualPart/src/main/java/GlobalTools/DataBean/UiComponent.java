@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 import Logger.LogManager;
 import UI.Tools.domain.Module;
@@ -51,6 +52,10 @@ public class UiComponent {
 
     public void setUUID(String UUID) {
         this.UUID = UUID;
+    }
+
+    public void initUUID(){
+        UUID= java.util.UUID.randomUUID().toString();
     }
 
     /**
@@ -250,6 +255,7 @@ public class UiComponent {
      * @param values
      * @return
      */
+    @SuppressWarnings("unchecked")
     public boolean setAttribute(String attributeName,Object... values){
         Class componentClass=componentObj.getClass();
         Method method=null;

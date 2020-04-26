@@ -1,5 +1,10 @@
 package com.example.administrator.visualizationpart.Adapter;
 
+
+/**
+ * 索引当前屏幕上的全部的组件
+ */
+
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.util.Log;
@@ -25,7 +30,6 @@ public class UiComponentIndexAdapter extends ArrayAdapter<String> {
 
     public UiComponentIndexAdapter(@NonNull Context context, int resource, @NonNull String[] strings) {
         super(context, resource, strings);
-
         this.context=context;
         this.resourceId=resource;
         this.datas=strings;
@@ -38,6 +42,7 @@ public class UiComponentIndexAdapter extends ArrayAdapter<String> {
 
         View view = LayoutInflater.from(getContext()).inflate(resourceId, parent, false);
         TextView componentName=view.findViewById(R.id.uiComponent_list_child_name);
+
         componentName.setText(adapterData);
         return view;
     }

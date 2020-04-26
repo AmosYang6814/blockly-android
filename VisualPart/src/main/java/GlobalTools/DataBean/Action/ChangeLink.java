@@ -11,7 +11,7 @@ public class ChangeLink extends Action {
      * 改变的构造器
      * @param action
      */
-    ChangeLink(Action action){
+    public ChangeLink(Action action){
         super(action);
         changes=new LinkedList<>();
         super.classType=ACTIONTYPE_MEAN_CHANGE;

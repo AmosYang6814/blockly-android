@@ -19,6 +19,7 @@ public class UiAttribute {
         this.parameterNumber = parameterNumber;
     }
 
+    @SuppressWarnings("unchecked")
     public UiAttribute(String componentName, String attributeDisplayName, String mnethodName, int parameterNumber,HashMap<Integer,Object> parameters) {
         this.componentName = componentName;
         this.attributeDisplayName = attributeDisplayName;

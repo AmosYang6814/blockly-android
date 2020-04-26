@@ -5,26 +5,30 @@ package UI.Draw;
  */
 
 public class Size {
-    double x,y;
 
-    public Size(double x, double y) {
-        this.x = x;
-        this.y = y;
+    static Size size=null;
+    int width,height;
+
+    public int getWidth() {
+        return width;
     }
 
-    public double getX() {
-        return x;
+    public int getHeight() {
+        return height;
     }
 
-    public void setX(double x) {
-        this.x = x;
+    public  static Size BuilderSize(int width, int height) {
+        if(size==null){
+            size=new Size();
+            size.width=width;
+            size.height=height;
+        }
+        return size;
     }
 
-    public double getY() {
-        return y;
+    public static Size getSize(){
+        if(size==null)throw new NullPointerException();
+        else return size;
     }
 
-    public void setY(double y) {
-        this.y = y;
-    }
 }

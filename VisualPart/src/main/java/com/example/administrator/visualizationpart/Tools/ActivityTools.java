@@ -66,10 +66,13 @@ public class ActivityTools {
             public void onClick(View v) {
                 myAlertInputDialog.dismiss();
                 ContentFragment temp1=new ContentFragment();
+
                 FragmentManager fm=activity.getSupportFragmentManager();
                 FragmentTransaction tx=fm.beginTransaction();
+
                 tx.add(R.id.FramMain,temp1,myAlertInputDialog.getResult());
                 tx.commit();
+
                 temp1.setName(myAlertInputDialog.getResult());
                 if(lastfragment!=null) tx.hide(lastfragment);
                 tx.show(temp1);
@@ -77,6 +80,7 @@ public class ActivityTools {
                 UIGlobalManager.getScreenNumberManager().addScreen(result[0]);
 
                 if(handler==null)return;
+
                 Message message=new Message();
                 message.what= FrameActivity.CREATE_NEW_FRAGMENT;
                 Bundle b=new Bundle();

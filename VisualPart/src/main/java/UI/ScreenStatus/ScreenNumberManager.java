@@ -40,6 +40,7 @@ public class ScreenNumberManager {
      * @param <T>
      * @return
      */
+    @SuppressWarnings("unchecked")
     public <T> Screen<T> getScreenByName(String name){
         return hashMap.get(name);
     }

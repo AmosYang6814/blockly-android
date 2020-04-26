@@ -1,5 +1,7 @@
 package com.example.administrator.visualizationpart.Activity;
 
+import android.animation.ObjectAnimator;
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Handler;
@@ -9,6 +11,7 @@ import android.support.constraint.ConstraintLayout;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatSeekBar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -16,6 +19,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.ImageButton;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
 import com.example.administrator.visualizationpart.Global.GlobalApplication;
 import com.example.administrator.visualizationpart.Logic.MainActivityLogic;
@@ -55,13 +60,14 @@ import UI.UICenterCtrol.UIGlobalManager;
 public class ContentFragment extends Fragment implements  Draw<View>,componentListinterface<ExpandableListView> , DisplayComponent , ActionPopMenu<View>, EvenPopMenu<View> {
     public final static int FLAG_DRAW=101;
     public final static int SET_ATTRIBUTE=1102;
+    public final static int SET_CHANGE=1103;
+    public final static int SELECT_UICOMPONENT=1232;
 
 
     private  SoftReference<MainActivityLogic>  mainActivityLogic=new SoftReference<MainActivityLogic>(new MainActivityLogic());
 
     private String name;
     private  MyAdapter myAdapter;
-
 
     public Handler handler=new Handler(){
         @Override
@@ -88,9 +94,18 @@ public class ContentFragment extends Fragment implements  Draw<View>,componentLi
     ConstraintLayout componentListPanel;
     ImageButton componentflodButton;
     private View mainView;
+    private TextView textView;
+    private AppCompatSeekBar highSeekBar;
+    private AppCompatSeekBar wightSeekBar;
+
+    private UiComponent lastStateComponent;
 
     //动态组件添加
     LinkedList<UiComponent> dymicsViews=new LinkedList<>();
+
+    //记录添加的属性改变事件的动作
+    UiComponent lastSetChangeAttribute;
+    Action lastAction;
 
     @Nullable
     @Override
@@ -122,6 +137,12 @@ public class ContentFragment extends Fragment implements  Draw<View>,componentLi
         componentListPanel.setVisibility(View.INVISIBLE);
 
         componentflodButton=view.findViewById(R.id.component_flod_button);
+
+        textView=view.findViewById(R.id.FragmentTag);
+        textView.setText(getTag());
+
+        highSeekBar=view.findViewById(R.id.HightSeekBar);
+        wightSeekBar=view.findViewById(R.id.weightSeekBar);
     }
 
     /**
@@ -137,7 +158,7 @@ public class ContentFragment extends Fragment implements  Draw<View>,componentLi
         group.addAll(UIGlobalManager.getDataManager().getAllClassfy());
 
         /*获取各个分类，及其子项目*/
-        HashMap<String, ArrayList<String>> hashMap=new HashMap();
+        HashMap<String, ArrayList<String>> hashMap=new HashMap<String,ArrayList<String>>();
         for(String s:group)hashMap.put(s,new ArrayList<String>());
         for(UiComponent uiComponent:result){
             ArrayList arrayList=hashMap.get(uiComponent.getClassfiy());
@@ -203,6 +224,7 @@ public class ContentFragment extends Fragment implements  Draw<View>,componentLi
             }
         });
 
+
         /**
          * 点击背景板隐藏组件菜单
          */
@@ -210,12 +232,19 @@ public class ContentFragment extends Fragment implements  Draw<View>,componentLi
             @Override
             public void onClick(View v) {
                 Log.i("流程追踪","背景板获取焦点");
+
+                lastStateComponent=null;
+
+                highSeekBar.setVisibility(View.GONE);
+                wightSeekBar.setVisibility(View.GONE);
+
                 backgroundPanel.setFocusable(true);
                 componentList.setFocusable(false);
                 componentList.setVisibility(View.INVISIBLE);
                 componentListPanel.setVisibility(View.INVISIBLE);
             }
         });
+
 
         /**
          * 点击菜单显示点击的选项
@@ -227,6 +256,50 @@ public class ContentFragment extends Fragment implements  Draw<View>,componentLi
 
                 Log.i("点击子菜单","参数："+"groupPosition:"+groupPosition+",childPosition:"+childPosition+",id:"+id);
                 return false;
+            }
+        });
+
+
+        highSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+                Log.i("组件大小调整，按钮状态：",progress+"，"+String.valueOf(lastSetChangeAttribute==null));
+                if(lastStateComponent==null)return;
+                View view=(View)lastStateComponent.getComponentObj();
+                ViewWrapper viewWrapper = new ViewWrapper(view);
+                ObjectAnimator.ofInt(viewWrapper, "trueHeight", (int)(getScreenSize().getHeight()*((double)progress/100))).setDuration(0).start();
+            }
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        wightSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+                if(lastStateComponent==null)return;
+
+                View view=(View)lastStateComponent.getComponentObj();
+
+                ViewWrapper viewWrapper = new ViewWrapper(view);
+                ObjectAnimator.ofInt(viewWrapper, "trueWidth", (int)(getScreenSize().getWidth()*((double)progress/100))).setDuration(0).start();
+
+                if(GlobalApplication.Debug){
+                    Log.i("组件大小调整",progress+"");
+                }
+            }
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });
     }
@@ -266,8 +339,16 @@ public class ContentFragment extends Fragment implements  Draw<View>,componentLi
         });
 
         view.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+
+                //设置大小滑块
+                ContentFragment.this.lastStateComponent=(UiComponent) v.getTag(R.id.uiComponent);
+                highSeekBar.setVisibility(View.VISIBLE);
+                wightSeekBar.setVisibility(View.VISIBLE);
+
+
                 EventTag eventTag=(EventTag) v.getTag(R.id.event);
                 Log.d("双击追踪", ""+eventTag.lastClickTime);
                 if(System.currentTimeMillis()-eventTag.lastClickTime>1000) eventTag.lastClickTime=System.currentTimeMillis();
@@ -286,9 +367,17 @@ public class ContentFragment extends Fragment implements  Draw<View>,componentLi
      *------------------------------------------------------------------------------------------------------------------------------------
      * 绘制动态组件的方法
      */
+
+    /**
+     * 测量屏幕大小
+     * @return
+     */
     @Override
     public Size getScreenSize() {
-        return null;
+        int screenWidth = getActivity().getWindowManager().getDefaultDisplay().getWidth(); // 屏幕宽（像素，如：480px）
+        int screenHeight = getActivity().getWindowManager().getDefaultDisplay().getHeight(); // 屏幕高（像素，如：800p）
+        Size.BuilderSize(screenWidth,screenHeight);
+        return Size.getSize();
     }
 
 
@@ -304,20 +393,22 @@ public class ContentFragment extends Fragment implements  Draw<View>,componentLi
             if(mainActivityLogic.get()==null)mainActivityLogic=new SoftReference<MainActivityLogic>(new MainActivityLogic());
             simpleComponent=mainActivityLogic.get().InitAndSetAttribute(getActivity(),simpleComponent);
 
+            //添加到动态组件中
+            dymicsViews.add(simpleComponent);
             View newView= (View)simpleComponent.getComponentObj();
 
             /**
              * 设置关联
              */
             newView.setTag(R.id.uiComponent,simpleComponent);
-
             simpleComponent.setComponentObj(newView);
-
             ConstraintLayout.LayoutParams layoutParams=new ConstraintLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             layoutParams.topToTop=backgroundPanel.getId();
             layoutParams.leftToLeft=backgroundPanel.getId();
             layoutParams.rightToRight=backgroundPanel.getId();
             layoutParams.topMargin=500;
+
+            newView.setClickable(false);
 
             registerViewToch(newView);
             backgroundPanel.addView(newView,layoutParams);
@@ -346,6 +437,8 @@ public class ContentFragment extends Fragment implements  Draw<View>,componentLi
         return false;
     }
 
+
+
     //根据属性动画的原理
     private void moveMethod2(View v,double dx, double dy) {
 
@@ -361,9 +454,9 @@ public class ContentFragment extends Fragment implements  Draw<View>,componentLi
     @Override
     public void setClickToListPopMenu(ExpandableListView object,String... name) {
         Intent intent=new Intent(getActivity(),AttributeSettingPage.class);
+        intent.setAction(AttributeSettingPage.ADD_NEW_UICOMPONENT);
         intent.putExtra("groupName",name[1]);
         intent.putExtra("childName",name[0]);
-
         startActivityForResult(intent,SET_ATTRIBUTE);
     }
 
@@ -381,20 +474,45 @@ public class ContentFragment extends Fragment implements  Draw<View>,componentLi
         switch (requestCode){
             case SET_ATTRIBUTE:
                 if(resultCode==AttributeSettingPage.RESULT_SUCCESS){
-                    LoadData(data);
+                    drawInscreen( LoadData(data));
                 }
+                break;
+            case SELECT_UICOMPONENT:
+                if(resultCode==UiComponentDisPlayPage.RETURN_SUCESS){
+                    //启动设置设置属性
+                    Intent intent=new Intent(getActivity(),AttributeSettingPage.class);
+                    intent.putExtra("DataId",dymicsViews.get(data.getIntExtra("DataIndex",0)).getId());
+                    intent.putExtra("DataName",dymicsViews.get(data.getIntExtra("DataIndex",0)).getUUID());
+                    intent.setAction(AttributeSettingPage.CHAGNE_UICOMPONENT);
+                    startActivityForResult(intent,SET_CHANGE);
+                }else {
+                    lastSetChangeAttribute=null;
+                    lastAction=null;
+                }
+                break;
+            case SET_CHANGE:
+                if(resultCode==AttributeSettingPage.RESULT_SUCCESS){
+
+                    //封装成UiComponent
+                    //属性设置完毕,添加属性改变动作
+                    if(lastAction!=null)
+                        UIGlobalManager.getEvenManager().getBuilderAction().builderAttributeChage(getTag(),lastSetChangeAttribute,LoadData(data),lastAction.getEvent());
+                }
+                break;
+
         }
     }
 
     /**
-     * 加载数据
+     * 加载数据,创建新的组件
      * @param data
      */
-    private void LoadData(Intent data){
+    private UiComponent LoadData(Intent data){
 
         if(GlobalApplication.Debug){
             Log.i("MainActivity_laodData","得到回传参数");
         }
+
         ArrayList<String> attributeString=data.getStringArrayListExtra("attribute");
 
         ArrayList<Attribute> attributes=new ArrayList<>();
@@ -403,13 +521,18 @@ public class ContentFragment extends Fragment implements  Draw<View>,componentLi
         for(int i=0;i<attributeString.size();i++){
             attributes.add(g.fromJson(attributeString.get(i),Attribute.class));
         }
+
         UiComponent newView=AbstractDataManager.getAbstractDataManager().findComponentById(data.getIntExtra("componentid",0));
         newView.clearAttributes();
 
         for(Attribute attribute:attributes){
             newView.addDefineAttribute(attribute);
         }
-        drawInscreen(newView);
+
+
+        if(data.getStringExtra("UUID")!=null)newView.setUUID(data.getStringExtra("UUID"));
+        else newView.initUUID();
+        return newView;
     }
 
     /**
@@ -431,6 +554,22 @@ public class ContentFragment extends Fragment implements  Draw<View>,componentLi
                 if(position==0){
                     ActivityTools.getInstance().AddNewContent(handler,ContentFragment.this,(AppCompatActivity) getActivity());
                     mainActivityLogic.get().attachAddAction((UiComponent) (view.getTag(R.id.uiComponent)),eventPosition);
+                }
+
+                if(position==2){
+                    String[] list=new String[dymicsViews.size()];
+
+                    for(int i=0;i<list.length;i++){
+                        list[i]=dymicsViews.get(i).getNearName()+":"+dymicsViews.get(i).getUUID();
+                    }
+
+                    Intent intent=new Intent(getActivity(),UiComponentDisPlayPage.class);
+                    intent.putExtra("components",list);
+                    startActivityForResult(intent,SELECT_UICOMPONENT);
+
+                    lastSetChangeAttribute=(UiComponent) (view.getTag(R.id.uiComponent));
+                    lastAction=new Action(getTag(),lastSetChangeAttribute.getUUID(),EventType.getActionTypeByIndex(eventPosition),ActionMean.getActionMeanByIndex(2));
+
                 }
             }
         }).show();
@@ -455,12 +594,43 @@ public class ContentFragment extends Fragment implements  Draw<View>,componentLi
      * ----------------------------------------------------------------------------------------------------------------------------------------------------------
      * 注册该屏幕的状态
      */
+
+
+    /**
+     * 组件包装类
+     */
+    private static class ViewWrapper {
+        private View mTarget;
+
+        public ViewWrapper(View view) {
+            mTarget = view;
+        }
+
+        public void setTrueWidth(int width) {
+            mTarget.getLayoutParams().width = width;
+            mTarget.requestLayout();//必须调用，否则宽度改变但UI没有刷新
+        }
+
+        public int getTrueWidth() {
+            return mTarget.getLayoutParams().width;
+        }
+        public void setTrueHeight(int height) {
+            mTarget.getLayoutParams().height = height;
+            mTarget.requestLayout();//必须调用，否则宽度改变但UI没有刷新
+        }
+
+        public int getTrueHeight() {
+            return mTarget.getLayoutParams().height;
+        }
+
+    }
 }
 
 class EventTag{
     int componentId=0;
     public double latsX,lastY;
     public long lastClickTime=0;
+    public int width,height;
     ArrayList<Action> actions=new ArrayList<>(4);
 }
 

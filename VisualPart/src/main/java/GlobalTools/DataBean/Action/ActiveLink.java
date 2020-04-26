@@ -1,7 +1,7 @@
 package GlobalTools.DataBean.Action;
 
 public class ActiveLink extends Action {
-    int activeScreenId;
+    String activeScreenId;
     int activeComponentId;
     String parameter;  /*如果参数是对象类型，那么参数为对象的Gson字符串*/
 
@@ -12,7 +12,7 @@ public class ActiveLink extends Action {
      * @param parameter
      * @param action
      */
-    ActiveLink(int activeScreenId,int activeComponentId,String parameter,Action action){
+    ActiveLink(String activeScreenId,int activeComponentId,String parameter,Action action){
         super(action);
         super.classType=ACTIONTYPE_MEAN_ACTIVE;
         this.activeScreenId=activeScreenId;

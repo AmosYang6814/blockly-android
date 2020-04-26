@@ -9,8 +9,8 @@ public  class Action {
     public final static int ACTIONTYPE_MEAN_CHANGE=173;
 
     private int actionId=-1;
-    private int ScreenId;
-    private int ComponentId;
+    private String ScreenName;
+    private String  ComponentId;
     protected int classType=0;
 
     public int getRelationType() {
@@ -24,27 +24,27 @@ public  class Action {
     private EventType action;/*动作的记录*/
     private ActionMean actionMean;/*动作的含义*/
 
-    public int getScreenId() {
-        return ScreenId;
+    public String getScreenId() {
+        return ScreenName;
     }
 
-    public void setScreenId(int screenId) {
-        ScreenId = screenId;
+    public void setScreenId(String screenId) {
+        ScreenName = screenId;
     }
 
-    public int getComponentId() {
+    public String getComponentId() {
         return ComponentId;
     }
 
-    public void setComponentId(int componentId) {
+    public void setComponentId(String componentId) {
         ComponentId = componentId;
     }
 
-    public EventType getAction() {
+    public EventType getEvent() {
         return action;
     }
 
-    public void setAction(EventType action) {
+    public void setEvent(EventType action) {
         this.action = action;
     }
 
@@ -56,8 +56,8 @@ public  class Action {
         this.actionMean = actionMean;
     }
 
-    public Action(int screenId, int componentId, EventType action, ActionMean actionMean) {
-        ScreenId = screenId;
+    public Action(String screenId, String componentId, EventType action, ActionMean actionMean) {
+        ScreenName= screenId;
         ComponentId = componentId;
         this.action = action;
         this.actionMean = actionMean;
@@ -68,9 +68,9 @@ public  class Action {
      * @param action
      */
     public Action(Action action){
-        this.ScreenId=action.getScreenId();
+        this.ScreenName=action.getScreenId();
         this.ComponentId=action.getComponentId();
-        this.action=action.getAction();
+        this.action=action.getEvent();
         this.actionMean=action.getActionMean();
     }
 

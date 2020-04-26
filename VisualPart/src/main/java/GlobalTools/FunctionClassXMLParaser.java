@@ -36,6 +36,7 @@ public class FunctionClassXMLParaser {
     }
 
 
+    @SuppressWarnings("unchecked")
     public static  <T> T getClassName(String labelName){
         NodeList nodeList = document.getElementsByTagName(labelName);
 

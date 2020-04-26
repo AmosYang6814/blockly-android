@@ -30,8 +30,17 @@
         android:networkSecurityConfig="@xml/network_security_config"
         tools:ignore="GoogleAppIndexingWarning">
 
+<!--        <provider-->
+<!--                android:authorities="com.google.blockly"-->
+<!--                android:name="android.support.v4.content.FileProvider"-->
+<!--                android:exported="false"-->
+<!--                android:grantUriPermissions="true">-->
+<!--            <meta-data-->
+<!--                    android:name="android.support.FILE_PROVIDER_PATHS"-->
+<!--                    android:resource="@xml/files_paths" />-->
+<!--        </provider>-->
         <provider
-                android:authorities="com.google.blockly"
+                android:authorities="${applicationId}.FileProvider"
                 android:name="android.support.v4.content.FileProvider"
                 android:exported="false"
                 android:grantUriPermissions="true">

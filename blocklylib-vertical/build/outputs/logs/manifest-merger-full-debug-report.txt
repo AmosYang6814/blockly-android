@@ -1,5 +1,6 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< HEAD
 ADDED from /Users/yangzhen/StudioProjects/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml:1:1-4:12
 INJECTED from /Users/yangzhen/StudioProjects/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml:1:1-4:12
 INJECTED from /Users/yangzhen/StudioProjects/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml:1:1-4:12
@@ -35,3 +36,40 @@ INJECTED from /Users/yangzhen/StudioProjects/blockly-android/blocklylib-vertical
 		INJECTED from /Users/yangzhen/StudioProjects/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
 		ADDED from /Users/yangzhen/StudioProjects/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
 		INJECTED from /Users/yangzhen/StudioProjects/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
+=======
+ADDED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml:1:1-4:12
+INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml:1:1-4:12
+INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml:1:1-4:12
+INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml:1:1-4:12
+INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml:1:1-4:12
+INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml:1:1-4:12
+INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml:1:1-4:12
+	package
+		ADDED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml:2:5-53
+		INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
+		ADDED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml:1:1-4:12
+		INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
+		ADDED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml:1:1-4:12
+		INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml:1:11-69
+uses-sdk
+INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
+INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
+INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
+INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
+		ADDED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
+		ADDED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/lyt/blockly-android/blocklylib-vertical/src/main/AndroidManifest.xml
+>>>>>>> origin/lytBranch

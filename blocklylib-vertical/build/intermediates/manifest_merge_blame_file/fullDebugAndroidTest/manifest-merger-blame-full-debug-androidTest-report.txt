@@ -1,0 +1,54 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.google.blockly.android.ui.vertical.test" >
+4
+5    <uses-sdk
+5-->/Volumes/lyt/blockly-android/blocklylib-vertical/build/intermediates/tmp/manifest/androidTest/full/debug/manifestMerger5826980169133111820.xml:5:5-74
+6        android:minSdkVersion="21"
+6-->/Volumes/lyt/blockly-android/blocklylib-vertical/build/intermediates/tmp/manifest/androidTest/full/debug/manifestMerger5826980169133111820.xml:5:15-41
+7        android:targetSdkVersion="26" />
+7-->/Volumes/lyt/blockly-android/blocklylib-vertical/build/intermediates/tmp/manifest/androidTest/full/debug/manifestMerger5826980169133111820.xml:5:42-71
+8
+9    <instrumentation
+9-->/Volumes/lyt/blockly-android/blocklylib-vertical/build/intermediates/tmp/manifest/androidTest/full/debug/manifestMerger5826980169133111820.xml:11:5-15:93
+10        android:name="android.test.InstrumentationTestRunner"
+10-->/Volumes/lyt/blockly-android/blocklylib-vertical/build/intermediates/tmp/manifest/androidTest/full/debug/manifestMerger5826980169133111820.xml:11:22-75
+11        android:functionalTest="false"
+11-->/Volumes/lyt/blockly-android/blocklylib-vertical/build/intermediates/tmp/manifest/androidTest/full/debug/manifestMerger5826980169133111820.xml:14:22-52
+12        android:handleProfiling="false"
+12-->/Volumes/lyt/blockly-android/blocklylib-vertical/build/intermediates/tmp/manifest/androidTest/full/debug/manifestMerger5826980169133111820.xml:13:22-53
+13        android:label="Tests for com.google.blockly.android.ui.vertical.test"
+13-->/Volumes/lyt/blockly-android/blocklylib-vertical/build/intermediates/tmp/manifest/androidTest/full/debug/manifestMerger5826980169133111820.xml:15:22-91
+14        android:targetPackage="com.google.blockly.android.ui.vertical.test" />
+14-->/Volumes/lyt/blockly-android/blocklylib-vertical/build/intermediates/tmp/manifest/androidTest/full/debug/manifestMerger5826980169133111820.xml:12:22-89
+15
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->[:blocklylib-core] /Volumes/lyt/blockly-android/blocklylib-core/build/intermediates/library_manifest/fullDebug/AndroidManifest.xml:11:5-67
+16-->[:blocklylib-core] /Volumes/lyt/blockly-android/blocklylib-core/build/intermediates/library_manifest/fullDebug/AndroidManifest.xml:11:22-64
+17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+17-->[:blocklylib-core] /Volumes/lyt/blockly-android/blocklylib-core/build/intermediates/library_manifest/fullDebug/AndroidManifest.xml:12:5-81
+17-->[:blocklylib-core] /Volumes/lyt/blockly-android/blocklylib-core/build/intermediates/library_manifest/fullDebug/AndroidManifest.xml:12:22-78
+18
+19    <application android:debuggable="true" >
+19-->/Volumes/lyt/blockly-android/blocklylib-vertical/build/intermediates/tmp/manifest/androidTest/full/debug/manifestMerger5826980169133111820.xml:7:5-9:19
+19-->/Volumes/lyt/blockly-android/blocklylib-vertical/build/intermediates/tmp/manifest/androidTest/full/debug/manifestMerger5826980169133111820.xml:7:18-43
+20        <uses-library android:name="android.test.runner" />
+20-->/Volumes/lyt/blockly-android/blocklylib-vertical/build/intermediates/tmp/manifest/androidTest/full/debug/manifestMerger5826980169133111820.xml:8:9-60
+20-->/Volumes/lyt/blockly-android/blocklylib-vertical/build/intermediates/tmp/manifest/androidTest/full/debug/manifestMerger5826980169133111820.xml:8:23-57
+21
+22        <service
+22-->[:blocklylib-core] /Volumes/lyt/blockly-android/blocklylib-core/build/intermediates/library_manifest/fullDebug/AndroidManifest.xml:15:9-17:40
+23            android:name="com.google.blockly.android.codegen.CodeGeneratorService"
+23-->[:blocklylib-core] /Volumes/lyt/blockly-android/blocklylib-core/build/intermediates/library_manifest/fullDebug/AndroidManifest.xml:16:13-83
+24            android:exported="false" />
+24-->[:blocklylib-core] /Volumes/lyt/blockly-android/blocklylib-core/build/intermediates/library_manifest/fullDebug/AndroidManifest.xml:17:13-37
+25
+26        <meta-data
+26-->[com.android.support:appcompat-v7:26.0.0] /Users/luoyutao/.gradle/caches/transforms-2/files-2.1/2cf98c49cbf0a7804102769c609ca731/appcompat-v7-26.0.0/AndroidManifest.xml:26:9-28:38
+27            android:name="android.support.VERSION"
+27-->[com.android.support:appcompat-v7:26.0.0] /Users/luoyutao/.gradle/caches/transforms-2/files-2.1/2cf98c49cbf0a7804102769c609ca731/appcompat-v7-26.0.0/AndroidManifest.xml:27:13-51
+28            android:value="26.0.0" />
+28-->[com.android.support:appcompat-v7:26.0.0] /Users/luoyutao/.gradle/caches/transforms-2/files-2.1/2cf98c49cbf0a7804102769c609ca731/appcompat-v7-26.0.0/AndroidManifest.xml:28:13-35
+29    </application>
+30
+31</manifest>

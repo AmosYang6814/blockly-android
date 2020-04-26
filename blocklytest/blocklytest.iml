@@ -31,8 +31,13 @@
     <output-test url="file://$MODULE_DIR$/build/intermediates/javac/fullDebugUnitTest/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+<<<<<<< HEAD
       <sourceFolder url="file://$MODULE_DIR$/build/generated/aidl_source_output_dir/fullDebug/compileFullDebugAidl/out" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/ap_generated_sources/fullDebug/out" isTestSource="false" generated="true" />
+=======
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/ap_generated_sources/fullDebug/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/aidl_source_output_dir/fullDebug/compileFullDebugAidl/out" isTestSource="false" generated="true" />
+>>>>>>> origin/lytBranch
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/full/debug" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/renderscript_source_output_dir/fullDebug/compileFullDebugRenderscript/out" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/full/debug" type="java-resource" generated="true" />
@@ -45,9 +50,12 @@
       <sourceFolder url="file://$MODULE_DIR$/src/fullDebug/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/fullDebug/shaders" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/aidl_source_output_dir/fullDebugAndroidTest/compileFullDebugAndroidTestAidl/out" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/renderscript_source_output_dir/fullDebugAndroidTest/compileFullDebugAndroidTestRenderscript/out" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/full/debug" isTestSource="true" generated="true" />
+<<<<<<< HEAD
       <sourceFolder url="file://$MODULE_DIR$/build/generated/ap_generated_sources/fullDebugAndroidTest/out" isTestSource="true" generated="true" />
+=======
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/renderscript_source_output_dir/fullDebugAndroidTest/compileFullDebugAndroidTestRenderscript/out" isTestSource="true" generated="true" />
+>>>>>>> origin/lytBranch
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/full/debug" type="java-test-resource" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/full/debug" type="java-test-resource" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestFullDebug/res" type="java-test-resource" />
